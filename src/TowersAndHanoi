@@ -1,0 +1,45 @@
+Towers and Hanoi, 3 rods and N disks
+class TOWERSANDHANOI {
+int[] disks; //sorted integer list
+	
+	TOWERSANDHANOI(int[] disks){
+		this.disks = disks;
+		Rod[] rods = new Rod[3]
+		for (int i = 0 ; i < 3; i++) { rods[i] = new Rod(i); }
+		
+		Stack<Integer> diskStack = rods[0].getRod();
+		for (int disk : disks) { // todo you had to push it in reverse order..
+			diskStack.push(disk);
+		}
+		
+		rods[0].moveDisks();
+	}
+	
+	class Rod() {
+	int index;
+	Stack<Integer> disks;
+	
+		Rod(int i) {
+			this.index = i;
+			disks = new Stack<Integer>();
+		}
+		
+		void moveDisks(Rod destination, Rod helper) {
+			if (this.isEmpty()) {
+				return; ///done 
+			}
+			
+			this.moveDisks(helper, destination);
+			
+			int topDisk = this.pop();
+			destination.push(topDisk);
+			
+			helper.moveDisks(destination, this);
+		}
+			
+			
+		} 
+	}	 
+
+
+}
