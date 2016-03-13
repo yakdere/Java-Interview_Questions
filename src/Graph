@@ -1,0 +1,55 @@
+// GRAPH : Set of vertices and collection of edges
+// you can represent a graph by its adjacents using a list. It is called list representation
+// adjacent : common vertes of 2 edges
+// Degree of a graph means the number of the adjacents of each edges, you can calculate the average or max degree by getting the value of
+// each adjacents count of every edges
+public class Graph {
+  ArrayList<Integer> edges;
+  HashMap<Integer, ArrayList<Integer>> vertexes; // edge as a key, adj as a value 
+  void addEdge(int v, edge) {
+    vertexes.get(edge).add(v);
+  }
+  
+  public ArrayList<Integer adj(int E) {
+      return vertexes.get(E);
+  }
+  
+  public int aveDegree() {
+  int total = 0;
+    for (int edge : edges) {
+      for (int v : adj(edje) {
+        total= total+v;
+      }
+    }
+    return total/edges.size();
+  }
+  
+  // DEPTH FIRST SEARCH
+  public void DFS(int n) {
+  boolean[] marked = new boolean[edges.size());
+  this.dfs(marked, n);
+  }
+  
+  private void dfs(boolean[] marked,int e) {
+    marked[e] = true;
+    for (int ad : this.adj(e)) {
+        if (!marked[ad]) {
+            dfs(marked, ad);
+          }
+        }
+      }
+  }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
